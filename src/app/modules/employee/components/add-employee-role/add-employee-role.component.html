@@ -1,0 +1,43 @@
+<div class="role-management" style="text-align: center;">
+    <table class="assigned-roles" *ngIf="myRoles.length>0">
+        <caption>My Roles</caption>
+        <tr>
+            <th>Role</th>
+            <th>Entry Date</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let myRole of myRoles">
+            <td>{{ myRole.role?.roleName }}</td>
+            <td>{{ myRole.entryDate | date:'dd/MM/yyyy' }}</td>
+            <td>
+                <button mat-icon-button (click)="removeThisRole(myRole)">
+                    <mat-icon>remove</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <table class="available-roles" *ngIf="availableRoles.length>0">
+        <caption>All Roles</caption>
+        <tr>
+            <th>Role</th>
+            <th>Entry Date</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let r of availableRoles; let i=index">
+            <td>{{ r.role.roleName }}</td>
+            <td>
+                <div class="role-details">
+                    <input type="date" [(ngModel)]="entryDate[i]">
+                </div>
+            </td>
+            <td>
+                <button mat-icon-button (click)="saveThisRole(r, i)" [disabled]="!isValidEntryDate(i)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <button mat-raised-button color="primary" type="submit" (click)="save()">Save</button>
+
+</div>

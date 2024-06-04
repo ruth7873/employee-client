@@ -1,0 +1,34 @@
+<form [formGroup]="roleForm" class="role-form">
+  <div class="field">
+    <mat-form-field>
+      <mat-label>Role Name</mat-label>
+      <input matInput type="text" class="roleName" formControlName="roleName">
+    </mat-form-field>
+    <ng-container *ngIf="roleForm.controls['roleName'].errors && roleForm.controls['roleName'].touched">
+      <div *ngIf="roleForm.controls['roleName'].errors['required']" class="error-message">
+        This field is required
+      </div>
+    </ng-container>
+  </div>
+  <div class="field">
+    <mat-form-field>
+      <mat-label>Role Type:</mat-label>
+      <mat-select class="isManagementRole" formControlName="isManagementRole">
+        <mat-option [value]="true">Management
+          <mat-icon>{{true | managementIcon}}</mat-icon>
+        </mat-option>
+        <mat-option [value]="false">Non-Management
+          <mat-icon>{{false | managementIcon}}</mat-icon>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <ng-container *ngIf="roleForm.controls['isManagementRole'].errors && roleForm.controls['isManagementRole'].touched">
+      <div *ngIf="roleForm.controls['isManagementRole'].errors['required']" class="error-message">
+        This field is required
+      </div>
+    </ng-container>
+  </div>
+  <button mat-raised-button color="primary" (click)="addRole()" [disabled]="!this.roleForm.valid">
+    <mat-icon>add</mat-icon> ADD
+  </button>
+</form>

@@ -1,0 +1,64 @@
+<div class="table-header">
+  <button mat-button class="bold-button" (click)="editEmployee(newEmployee)">
+    <mat-icon>group_add</mat-icon> Add Employee
+  </button>
+  <button mat-button class="bold-button" (click)="addRole()">
+    <mat-icon>work</mat-icon> Add Role
+  </button>
+  <button mat-button class="bold-button" (click)="exportToExcel()"> <mat-icon>cloud_download</mat-icon> Export to Excel
+  </button>
+  <div class="filter-container">
+    <input matInput type="text" placeholder="Search by name" [(ngModel)]="inputToFilter" (input)="filter()" />
+    <mat-icon class="search-icon">search</mat-icon>
+  </div>
+  <div class="filter-container">
+    <mat-radio-group class="radio-group" (change)="onSelectionChange($event)">
+      <mat-radio-button class="radio-button" [value]="null">Cancel</mat-radio-button>
+      <mat-radio-button class="radio-button" [value]="0">
+        <mat-icon>{{"Male" | genderIcon }}</mat-icon> Male</mat-radio-button>
+      <mat-radio-button class="radio-button" [value]="1">
+        <mat-icon>{{"Female" | genderIcon}}</mat-icon> Female</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+<mat-paginator [length]="employees?.length" [pageSize]="3" [pageSizeOptions]="[3, 5, 10, 25, 100]"
+  (page)="handlePageChange($event)"></mat-paginator>
+
+  <table class="employees-table">
+    <thead>
+      <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Identification Number</th>
+        <th>Employment Start Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let employee of employees | slice: startIndex: endIndex">
+        <tr>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.identificationNumber }}</td>
+          <td>{{ employee.employmentStartDate | date }}</td>
+          <td>
+            <button mat-icon-button (click)="editEmployee(employee)" matTooltip="Edit Employee">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="showDetailes(employee)" matTooltip="Show Details">
+              <mat-icon>info</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deleteEmployee(employee.id)" matTooltip="Delete Employee">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  
+
+<div class="empty">
+
+</div>

@@ -1,0 +1,15 @@
+<div class="links">
+  <img src="/assets/icons8-permanent-job-50.png">
+  <button mat-button routerLink="/user/login" *ngIf="!isUserLoggedIn">
+    <mat-icon>login</mat-icon> Log in
+  </button>
+  <button mat-button (click)="register()">
+    <mat-icon>person_add</mat-icon> Register
+  </button>
+  <button mat-button routerLink="/employee/allEmployees">
+    <mat-icon>library_books</mat-icon> All Employees
+  </button>
+  <button mat-button routerLink="/user/logout" *ngIf="isUserLoggedIn">
+    <mat-icon>exit_to_app</mat-icon> Log out
+  </button>
+</div>

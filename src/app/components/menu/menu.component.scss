@@ -1,0 +1,52 @@
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1976d2;
+    padding: 10px 0;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  .links button {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 10px;
+
+      :nth-child(4) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .links button:hover {
+    background-color: #1565c0;
+  }
+
+  /* עיצוב הטקסט בכפתור */
+  .links button mat-icon {
+    margin-right: 8px;
+  }
+
+  /* עיצוב כפתור התחברות בלבד */
+  .links button[routerLink="/user/login"] {
+    background-color: #1976d2;
+  }
+
+  .links button[routerLink="/user/login"]:hover {
+    background-color: #1565c0;
+  }

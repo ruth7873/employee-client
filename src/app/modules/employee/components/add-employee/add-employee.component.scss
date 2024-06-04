@@ -1,0 +1,30 @@
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  margin: auto;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  margin: 5px;
+  width: 250px;
+}
+
+mat-icon {
+  color: gray;
+  cursor: pointer;
+}
+
+.form-field {
+  display: flex;
+}
+
+.form-field2 {
+  display: flex;
+  flex-direction: column;
+}

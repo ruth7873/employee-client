@@ -1,0 +1,14 @@
+.role-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  align-self: flex-start;
+}

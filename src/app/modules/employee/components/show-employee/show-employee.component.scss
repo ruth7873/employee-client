@@ -1,0 +1,60 @@
+.example-card {
+  width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.example-card-content {
+  padding: 15px;
+}
+
+.example-header-image {
+  background-image: url('https://via.placeholder.com/50');
+  background-size: cover;
+}
+
+.example-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.example-card-actions button {
+  margin-left: 8px;
+}
+
+.roles-list ul {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.roles-list ul li {
+  margin-bottom: 10px;
+}
+
+.roles-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.role-icon {
+  margin-right: 8px;
+  color: #757575;
+}
+
+.role-details {
+  flex-grow: 1;
+  color: #333;
+}
+
+.management-icon {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-left: 8px;
+}

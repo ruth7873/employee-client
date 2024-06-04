@@ -1,0 +1,100 @@
+[debug] [2024-06-04T21:02:15.815Z] ----------------------------------------------------------------------
+[debug] [2024-06-04T21:02:15.817Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-04T21:02:15.818Z] CLI Version:   13.10.2
+[debug] [2024-06-04T21:02:15.818Z] Platform:      win32
+[debug] [2024-06-04T21:02:15.818Z] Node Version:  v20.11.1
+[debug] [2024-06-04T21:02:15.818Z] Time:          Wed Jun 05 2024 00:02:15 GMT+0300 (שעון ישראל (קיץ))
+[debug] [2024-06-04T21:02:15.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-04T21:02:15.820Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-06-04T21:02:15.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-04T21:02:15.834Z] > authorizing via signed-in user (ruth0533137873@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\user1\Desktop\year b\לרנר חדשנות טכנולוגית\ענן\‏‏תיקיה חדשה\employees-client\employees-client\EmployeesApplication
+
+[debug] [2024-06-04T21:02:16.266Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-06-04T21:02:16.266Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-04T21:04:44.861Z] > refreshing access token with scopes: []
+[debug] [2024-06-04T21:04:44.862Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-04T21:04:44.863Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T21:04:49.228Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------725353634804261041647559","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: read ECONNRESET
+[debug] [2024-06-04T21:04:49.230Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-06-04T21:04:52.286Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:142:12)
+    at refreshTokens (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:515:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getAccessToken (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:40:18)
+    at async Client.addAuthHeader (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:167:21)
+    at async Client.request (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:118:34)
+    at async getProjectPage (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:238:17)
+    at async getFirebaseProjectPage (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:255:23)
+    at async selectProjectInteractively (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:94:41)
+    at async doSetup (C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2024-06-04T21:05:00.779Z] ----------------------------------------------------------------------
+[debug] [2024-06-04T21:05:00.781Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user1\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-04T21:05:00.781Z] CLI Version:   13.10.2
+[debug] [2024-06-04T21:05:00.782Z] Platform:      win32
+[debug] [2024-06-04T21:05:00.782Z] Node Version:  v20.11.1
+[debug] [2024-06-04T21:05:00.782Z] Time:          Wed Jun 05 2024 00:05:00 GMT+0300 (שעון ישראל (קיץ))
+[debug] [2024-06-04T21:05:00.782Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-04T21:05:00.786Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-04T21:05:00.787Z] > authorizing via signed-in user (ruth0533137873@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\user1\Desktop\year b\לרנר חדשנות טכנולוגית\ענן\‏‏תיקיה חדשה\employees-client\employees-client\EmployeesApplication
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-04T21:05:05.793Z] > refreshing access token with scopes: []
+[debug] [2024-06-04T21:05:05.795Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-04T21:05:05.795Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T21:05:06.056Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-04T21:05:06.056Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T21:05:06.078Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-06-04T21:05:06.759Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-06-04T21:05:06.759Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project employees-ruth (employees-ruth) 
+[info] 
+=== Hosting Setup
+[debug] [2024-06-04T21:05:10.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/employees-ruth [none]
+[debug] [2024-06-04T21:05:10.790Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/employees-ruth 200
+[debug] [2024-06-04T21:05:10.790Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/employees-ruth {"projectId":"employees-ruth","projectNumber":"910706195396","displayName":"employees-ruth","name":"projects/employees-ruth","resources":{"hostingSite":"employees-ruth"},"state":"ACTIVE","etag":"1_6db0bab4-621f-4672-9509-8fdaa88d25f4"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.error-message {
+  color: red;
+}
+
+.full-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.mat-icon {
+  cursor: pointer;
+}
+.center-form {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  height: 100vh;
+  position: relative;
+  margin-top: 3%;
+}
+
+.registration-form {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

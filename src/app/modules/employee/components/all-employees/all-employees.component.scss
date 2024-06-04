@@ -1,0 +1,138 @@
+.table-header {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.employees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employees-table th {
+  text-align: center;
+  background-color:whitesmoke;
+}
+
+.employees-table td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.employees-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.employees-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.filter-container {
+  margin-left: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-container input[type="text"] {
+  width: 200px;
+  padding: 8px 30px 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.filter-container input[type="text"]::placeholder {
+  color: #999;
+}
+
+.filter-container .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.mat-radio-button {
+  margin-right: 10px;
+}
+
+.mat-radio-button:last-child {
+  margin-right: 0;
+}
+
+.bold-button {
+  font-weight: bold;
+  background-color: transparent;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bold-button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.mat-paginator {
+  visibility: visible;
+}
+
+.mat-paginator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* סגירת טבלה כשהמסך קטן יותר */
+@media screen and (max-width: 600px) {
+  .employees-table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .employees-table thead,
+  .employees-table tbody,
+  .employees-table th,
+  .employees-table td,
+  .employees-table tr {
+    display: block;
+  }
+
+  .employees-table tbody tr {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .employees-table thead {
+    background-color: #f0f0f0;
+  }
+
+  .employees-table th,
+  .employees-table td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .table-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .table-header>* {
+    margin: 5px;
+  }
+}
+
+.empty{
+height: 40px;
+}
